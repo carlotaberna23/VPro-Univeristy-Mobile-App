@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Login.SignUpPage"
+             Shell.NavBarIsVisible="False"
+             Title="SignUpPage">
+    <Grid RowDefinitions="1*,8*,1*">
+        <Frame BackgroundColor="#FAD00F" Grid.Row="0" HorizontalOptions="EndAndExpand" 
+               Padding="0"
+               Margin="0, -80, -80, 0"
+               HeightRequest="250" 
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" Grid.Row="0" HorizontalOptions="EndAndExpand" 
+               Padding="0"
+               Margin="0, -120, -120, 0"
+               HeightRequest="250" 
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame ZIndex="1" BackgroundColor="{x:StaticResource DashboardBackground}"
+               Grid.Row="1" VerticalOptions="CenterAndExpand"
+               Margin="30,35,30,40"
+               >
+            <ScrollView>
+                <VerticalStackLayout Spacing="25">
+                    <Label Text="Virtual Pro University" FontSize="28" FontAttributes="Bold" />
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image Source="user.png" HeightRequest="25" WidthRequest="25" />
+                            <Entry VerticalOptions="CenterAndExpand" Placeholder="Name" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image Source="email.png" HeightRequest="25" WidthRequest="25" />
+                            <Entry VerticalOptions="CenterAndExpand" Placeholder="Email" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image Source="mobile.png" HeightRequest="25" WidthRequest="25" />
+                            <Entry VerticalOptions="CenterAndExpand" Placeholder="Mobile Number" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+                        <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                            <Image Source="password.png" HeightRequest="25" WidthRequest="25" />
+                            <Entry VerticalOptions="CenterAndExpand" Placeholder="Password" IsPassword="True" Grid.Column="1"/>
+                        </Grid>
+                    </Frame>
+
+                    <Button CornerRadius="0" HeightRequest="60" Text="SIGN UP" FontSize="20" FontAttributes="Bold"/>
+
+
+                    <HorizontalStackLayout Spacing="10">
+                        <Label FontAttributes="Bold" Text="already have a account?"/>
+                        <Label Text="SIGN IN" FontSize="18" FontAttributes="Bold"
+                           TextColor="{x:StaticResource Primary}"/>
+                        <HorizontalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_For_SignIn"/>
+                        </HorizontalStackLayout.GestureRecognizers>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+            
+
+        </Frame>
+
+        <Frame BackgroundColor="#FAD00F" Grid.Row="2" 
+               VerticalOptions="EndAndExpand"
+               HorizontalOptions="StartAndExpand" 
+               Padding="0"
+               Margin="0,0,0,-180"
+               HeightRequest="250" 
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+
+        <Frame BackgroundColor="{x:StaticResource Primary}" 
+               VerticalOptions="EndAndExpand"
+               Grid.Row="2" 
+               HorizontalOptions="StartAndExpand" 
+               Padding="0"
+               Margin="0,0,0,-200"
+               HeightRequest="250" 
+               WidthRequest="250" CornerRadius="125">
+
+        </Frame>
+    </Grid>
+</ContentPage>
